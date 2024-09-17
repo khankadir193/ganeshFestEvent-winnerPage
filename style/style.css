@@ -219,7 +219,7 @@ button {
 .talent-leaderboard {
     margin-top: 22vw;
     overflow: scroll;
-    height: 72vh;
+    /* height: 72vh; */
 }
 
 .leaderboard-strip {
