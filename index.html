@@ -209,6 +209,12 @@
                 <!-- <div class="leaaderboard-total-amount">
                     <img src="./img/Single Bean.png" alt="" class="beans" /> 00,00,000
                 </div> -->
+                 <!-- here adding three tab like dance/shayri,fashion in talent tab -->
+                <div class="leaderBoardTableTab">
+                    <button onclick="leaderBoardTab('dance','round3')">PK Dance Battle</button>
+                    <button onclick="leaderBoardTab('shayri','round3')">PK Shayri Battle</button>
+                    <button onclick="leaderBoardTab('fashion','round3')">Tradditional Attire & Fashion Battle</button>
+                </div>
                 <div class="top3">
                     <div>
                         <div class="top3-l">
@@ -524,6 +530,29 @@
                 },
             });
         }
+
+
+    function leaderBoardTab(eventType, round) {
+        console.log('leaderboardTab....???')
+        // Example: Hide all tab content initially
+        const tabContents = document.querySelectorAll('.tabContent3');
+        tabContents.forEach(content => content.style.display = 'none');
+
+        // Remove active class from all buttons
+        const tabButtons = document.querySelectorAll('.leaderBoardTableTab button');
+        tabButtons.forEach(button => button.classList.remove('active'));
+
+        // Display the specific tab content based on the button clicked
+        const selectedContent = document.getElementById(`${eventType}-${round}`);
+        if (selectedContent) {
+            selectedContent.style.display = 'block';
+        } else {
+            console.error('No content found for', `${eventType}-${round}`);
+        }
+
+        // Add the active class to the clicked button
+        event.currentTarget.classList.add('active');
+    }
     </script>
 </body>
 
