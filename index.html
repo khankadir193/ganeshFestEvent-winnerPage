@@ -215,7 +215,7 @@
                     <button onclick="leaderBoardTab('shayri','round3')">PK Shayri Battle</button>
                     <button onclick="leaderBoardTab('fashion','round3')">Tradditional Attire & Fashion Battle</button>
                 </div>
-                
+
                 <!-- dance-tab -->
                 <div id="dance-round3" class="tabContent3" style="display:none;">
                     <div class="top3">
@@ -973,6 +973,14 @@
             });
         }
 
+        document.addEventListener('DOMContentLoaded', function () {
+            // Activate the first tab content on page load
+
+            const firstButton = document.querySelector('.leaderBoardTableTab button');
+            if (firstButton) {
+                firstButton.click(); // Trigger a click event on the first button
+            }
+        });
 
         function leaderBoardTab(eventType, round) {
             console.log('leaderboardTab....???')
